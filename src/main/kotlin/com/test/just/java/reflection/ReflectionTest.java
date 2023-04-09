@@ -5,9 +5,10 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 public class ReflectionTest {
-    public static void main(String[] args) throws InvocationTargetException, IllegalAccessException {
+    public static void main(String[] args) throws InvocationTargetException, IllegalAccessException, ClassNotFoundException {
         // 클래스 이름으로부터 클래스 객체를 가져옵니다.
-        Class<?> classObj = MyClass.class;
+//        Class<?> classObj = MyClass.class;
+        Class<?> classObj = Class.forName("com.test.just.java.reflection.MyClass");
 
         // 클래스의 모든 필드를 가져옵니다.
         Field[] fields = classObj.getDeclaredFields();
